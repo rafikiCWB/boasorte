@@ -16,6 +16,7 @@ button {
     margin: 20px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
@@ -27,4 +28,14 @@ p {
     font-size: 20px;
     color: #ffffff;
 
+}
+#nomeLista li {
+    color: white;
+    line-height: 1.2;
+    padding: 5px 0;
+    font-size: 30px;
+}
+#resultado {
+    color: cornflowerblue;
+    font-size: 50px;
 }

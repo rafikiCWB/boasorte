@@ -4,6 +4,10 @@
     <title>Sorteio de Nome</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<div id="nomesContainer" style="position: fixed; left: 0; top: 0;
+bottom: 0; width: 30%; overflow: auto;">
+    <ul id="nomeLista"></ul>
+</div>
 <body>
 <div style="display: flex; flex-direction: column; align-items: center;
     justify-content: center; height: 100vh;">
@@ -12,26 +16,6 @@
     <button id="sorteioBtn">Sortear nome</button>
     <p id="resultado"></p>
 </div>
-<script>
-    var nomes = [];
-
-    document.getElementById('adicionarBtn').onclick = function () {
-        var nomeInput = document.getElementById('nomeInput')
-        if (nomeInput.value) {
-            nomes.push(nomeInput.value)
-            nomeInput.value = ""
-        } else {
-            alert("Por favor, digite um nome válido")
-        }
-    }
-    document.getElementById('sorteioBtn').onclick = function () {
-        if (nomes.length > 0) {
-            var nomeSorteado = nomes[Math.floor(Math.random() * nomes.length)]
-            document.getElementById('resultado').textContent = nomeSorteado
-        } else {
-            alert("Por favor, adicione alguns nomes primeiro!")
-        }
-    }
-</script>
+<script src="app.js"></script>
 </body>
 </html>
